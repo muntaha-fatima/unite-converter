@@ -103,6 +103,73 @@ def convert(value, from_unit, to_unit):
     "Joule": {"Calorie": 0.239006, "Kilowatt-hour": 2.7778e-7, "Electronvolt": 6.242e18, "BTU": 0.000947817},
     "Calorie": {"Joule": 4.184},
     "Kilowatt-hour": {"Joule": 3.6e6},
+      # Power
+    "Watt": {"Kilowatt": 1/1000, "Horsepower": 1/745.7, "Megawatt": 1/1000000},
+    "Kilowatt": {"Watt": 1000, "Horsepower": 1.34102, "Megawatt": 1/1000},
+    "Horsepower": {"Watt": 745.7, "Kilowatt": 1/1.34102, "Megawatt": 1/1341.02},
+    "Megawatt": {"Watt": 1000000, "Kilowatt": 1000, "Horsepower": 1341.02},
+
+    # Force
+    "Newton": {"Dyne": 1e5, "Pound-force": 0.224809, "Kilopond": 0.101972},
+    "Dyne": {"Newton": 1e-5, "Pound-force": 2.24809e-6, "Kilopond": 1.01972e-6},
+    "Pound-force": {"Newton": 4.44822, "Dyne": 4.44822e5, "Kilopond": 0.453592},
+    "Kilopond": {"Newton": 9.80665, "Dyne": 9.80665e5, "Pound-force": 2.20462},
+
+    # Data Storage
+    "Byte": {"KB": 1/1024, "MB": 1/1048576, "GB": 1/1073741824, "TB": 1/1099511627776, "PB": 1/1125899906842624, "Bit": 8},
+    "KB": {"Byte": 1024, "MB": 1/1024, "GB": 1/1048576, "TB": 1/1073741824, "PB": 1/1099511627776},
+    "MB": {"Byte": 1048576, "KB": 1024, "GB": 1/1024, "TB": 1/1048576, "PB": 1/1073741824},
+    "GB": {"Byte": 1073741824, "KB": 1048576, "MB": 1024, "TB": 1/1024, "PB": 1/1048576},
+    "TB": {"Byte": 1099511627776, "KB": 1073741824, "MB": 1048576, "GB": 1024, "PB": 1/1024},
+    "PB": {"Byte": 1125899906842624, "KB": 1099511627776, "MB": 1073741824, "GB": 1048576, "TB": 1024},
+
+    # Fuel Efficiency
+    "km/l": {"L/100km": 100, "mpg (US)": 2.35215, "mpg (UK)": 2.82481},
+    "L/100km": {"km/l": 1/100, "mpg (US)": 235.215, "mpg (UK)": 282.481},
+    "mpg (US)": {"km/l": 0.425144, "L/100km": 1/2.35215, "mpg (UK)": 1.20095},
+    "mpg (UK)": {"km/l": 0.354006, "L/100km": 1/2.82481, "mpg (US)": 0.832674},
+
+    # Angle
+    "Degrees": {"Radians": 3.14159/180, "Gradians": 10/9},
+    "Radians": {"Degrees": 180/3.14159, "Gradians": 200/3.14159},
+    "Gradians": {"Degrees": 9/10, "Radians": 3.14159/200},
+
+    # Frequency
+    "Hertz": {"Kilohertz": 1/1000, "Megahertz": 1/1000000, "Gigahertz": 1/1000000000},
+    "Kilohertz": {"Hertz": 1000, "Megahertz": 1/1000, "Gigahertz": 1/1000000},
+    "Megahertz": {"Hertz": 1000000, "Kilohertz": 1000, "Gigahertz": 1/1000},
+    "Gigahertz": {"Hertz": 1000000000, "Kilohertz": 1000000, "Megahertz": 1000},
+
+    # Luminous Intensity
+    "Candela": {"Lumen": 1, "Lux": 1},
+    "Lumen": {"Candela": 1, "Lux": 1},
+    "Lux": {"Candela": 1, "Lumen": 1},
+
+    # Radioactivity
+    "Becquerel": {"Curie": 1/3.7e10, "Sievert": 1},
+    "Curie": {"Becquerel": 3.7e10, "Sievert": 1},
+    "Sievert": {"Becquerel": 1, "Curie": 1},
+
+    # Torque
+    "Newton Meter": {"Pound-foot": 1/1.35582, "Dyne-centimeter": 1e7},
+    "Pound-foot": {"Newton Meter": 1.35582, "Dyne-centimeter": 1.35582e7},
+    "Dyne-centimeter": {"Newton Meter": 1e-7, "Pound-foot": 1/1.35582e7},
+
+    # Electrical Conductance
+    "Siemens": {"Mho": 1},
+    "Mho": {"Siemens": 1},
+
+    # Electrical Resistance
+    "Ohm": {"Milliohm": 1000, "Kiloohm": 1/1000, "Megaohm": 1/1000000},
+    "Milliohm": {"Ohm": 1/1000, "Kiloohm": 1/1000000, "Megaohm": 1/1000000000},
+    "Kiloohm": {"Ohm": 1000, "Milliohm": 1000000, "Megaohm": 1/1000},
+    "Megaohm": {"Ohm": 1000000, "Milliohm": 1e9, "Kiloohm": 1000},
+
+    # Magnetic Flux
+    "Weber": {"Maxwell": 1e8, "Tesla": 1, "Gauss": 1e4},
+    "Maxwell": {"Weber": 1e-8, "Tesla": 1e-8, "Gauss": 0.1},
+    "Tesla": {"Weber": 1, "Maxwell": 1e8, "Gauss": 10000},
+    "Gauss": {"Weber": 1e-4, "Maxwell": 10, "Tesla": 1/10000},
 }
 
 
